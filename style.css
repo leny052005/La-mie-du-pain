@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+section.top-page {
+    background: url('../img/devanture.jpg');
+    background-size: cover;
+    width: 2600px;
+    height: 1270px;
+    flex-wrap: wrap;
+}
+
+header.header {
+    display: flex;
+    align-items: center;
+}
+
+/*fond d'ecran*/
+
+.slogan {
+    min-width: 40px;
+    font-family: 'Tangerine', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.big-title {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: white;
+    font-size: 20em;
+    padding: 20px 50px;
+    margin-top: 150px;
+}
+
+.big-titre {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: white;
+    font-size: 150px;
+    padding: 20px 50px;
+    margin-top: 150px;
+}
+
+/*image et texte*/
+
+nav.nav {
+    display: flex;
+    backdrop-filter: blur(5px);
+}
+
+/*texte*/
+ 
+.texte {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    font-size: 30px;
+}
+
+.accueil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+}
+
+/*logo*/
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+/*titre*/
+
+.titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 5em;
+    font-family: 'Tangerine', serif;
+    font-weight: 100;
+    position: relative;
+    object-fit: cover;
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: contain 0%;
+    animation-range-end: contain 50%;
+}
+
+.titre::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(226, 147, 43);
+    width: 520px;
+    height: 7px;
+    bottom: 0;
+}
+
+/*dispo img*/
+
+.corp {
+    min-height: 700px;
+    border: 8px solid black;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 500px;
+    width: 600px;
+    font-size: 40pt;
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: contain -250%;
+    animation-range-end: contain 30%;
+}
+
+.box:hover{
+    transform: scale(1.02);
+   } 
+
+.nom1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 0 auto;
+}
+
+.nom2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 0 auto;
+}
+
+.nom3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 0 auto;
+}
+
+/*slide photo*/
+
+.slider-wrapper {
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    object-fit: cover;
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: contain -250%;
+    animation-range-end: contain 30%;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+/*ecriture*/
+
+.ecriture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    font-family: 'Tangerine', serif;
+    font-size: 70px;
+    color: white;
+    object-fit: cover;
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: contain -10%;
+    animation-range-end: contain 70%;
+}
+
+/*carte*/
+
+.map {
+    object-fit: cover;
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: contain -680%;
+    animation-range-end: contain 5%;
+}
+
+.carte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.droit{
+    margin-top: 150px;
+    color: black;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.plant-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(184, 180, 180);
+    padding: 5px 20px;
+}
+
+.plant-name {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 3px;
+}
+
+.plant-price {
+    color: black;
+    line-height: 3px;
+    font-size: 14px;
+    font-weight: 800
+}
+
+  .scroller {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    z-index: 1000;
+    background: linear-gradient(
+      to right,
+      rgb(213, 155, 29) 100%,
+      rgba(255, 148, 166, 0) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0;
+    transform-origin: left;
+    animation: scroll linear;
+    animation-timeline: scroll();
+    animation-range-start: cover 100px;
+    animation-range-end: cover 100%;
+  }
+  
+  @keyframes scroll {
+    from {
+      background-size: 0% 5px;
+    }
+    to {
+      background-size: 100% 5px;
+    }
+  }
+
+/*pied de page*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 100px;
+    font-weight: 600;
+    color: white;
+}
+
+footer a.cgv {
+    text-decoration: none;
+    color: white;
+}
+
+  @media screen and (max-width: 420px) {
+
+    section.top-page {
+        background: url('../img/devanture.jpg');
+        display: flex;
+        background-size: cover;
+        width: 414px;
+        height: 945px;
+        flex-wrap: wrap;
+    }
+
+    .big-titre {
+        display: none;
+    }
+
+    .big-title {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 350px;
+        font-size: 60px;
+        color: #fff;
+    }
+
+    .texte {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        width: 100%;
+        list-style: none;
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 20px;
+        height: 50px;
+    }
+    
+
+    .titrer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    .titre::before {
+        display: none;
+    }
+
+    .nave {
+        margin-left: 0;
+    }
+
+    .corp {
+        margin-top: 100px;
+    }
+
+    .ecriture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+    }
+
+    .slider-wrapper {
+        margin-top: 50px;
+    }
+
+    .carte {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+  }
+
+
+
+@media screen and (max-width: 380px) {
+
+
+    section.top-page {
+        background: url('../img/devanture.jpg');
+        display: flex;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+/*texte*/
+ 
+.texte {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    list-style: none;
+    font-size: 100%;
+  }
+
+.accueil {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+
+/*logo*/
+
+.logo {
+    width: 50px;
+  }
+
+.titre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 5em;
+    font-family: 'Tangerine', serif;
+    font-weight: 100;
+    position: relative;
+  }
+
+  .box {
+    height: 500px;
+    width: 600px;
+    font-size: 40pt;
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+  .slider {
+    display: flex;
+  }
+
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  .scroller {
+    display: none;
+  }
+
+.slider-nav a:hover {
+    opacity: 1;
+  }
+
+  @keyframes scroll {
+    from {
+      background-size: 0% 0px;
+    }
+    to {
+      background-size: 0% 0px;
+    }
+  }
+}

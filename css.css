@@ -1,0 +1,41 @@
+/*text*/
+
+nav.nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 0px;
+    text-decoration: none;
+    width: 100%;
+    height: 100px;
+    backdrop-filter: blur(5px);
+}
+
+nav.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav.nav ul {
+    display: flex;
+    justify-content: space-around;   
+    list-style: none;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+nav.nav li {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*logo*/
+
+.nave {
+    margin: 0 auto;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    z-index: 1278;
+}
